@@ -11,6 +11,13 @@
 |
 */
 
-Route::prefix('api')->group(function(){
-	Route::post('auth', 'AuthController@auth');
+//REST Service
+Route::prefix('REST')->group(function(){
+	//auth portal
+	Route::post('api/auth', 'AuthController@auth');
+	
+	//api group
+	Route::prefix('api')->group(function(){
+
+	});
 });

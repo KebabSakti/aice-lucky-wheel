@@ -16,7 +16,7 @@ class CreateOutletsTable extends Migration
         Schema::create('outlets', function (Blueprint $table) {
             $table->increments('id');
             $table->string('username');
-            $table->string('kode_asset');
+            $table->string('kode_asset')->unique();
             $table->text('nama_toko');
             $table->float('lat', 8, 2);
             $table->float('lng', 8, 2);
